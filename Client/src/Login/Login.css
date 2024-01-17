@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+.logincard {
+  background-color: #f5f4ff;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 2rem;
+  padding: 2rem;
+  width: 30rem;
+  transition: transform 0.8s;
+  font-weight: bold;
+  font-family: "Kdam Thmor Pro", sans-serif;
+}
+
+body {
+  background-color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  background-color: #05ef63;
+  color: #121d28;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  border-color: #05ef63;
+  transition: transform 1s;
+}
+.btn:hover {
+  /* background-color: #06E3E2; */
+  background-color: #05ef63;
+  width: fit-content;
+  transition: 1s;
+  color: #121d28;
+  border-color: #05ef63;
+}
+.form-text {
+  color: grey;
+}
+.form-control {
+  color: #00133f;
+  background-color: white;
+}
+
+#log {
+  height: 100% !important;
+}
