@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "./data.css";
 import { useNavigate } from "react-router";
-
+import api from '../api';
 function Data() {
     let history = useNavigate();
   const [loader, setLoader] = useState(false);
@@ -22,7 +22,7 @@ function Data() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/data/getdata", {
+        const response = await fetch(`${api}/api/data/getdata`, {
           method: "GET",
           headers: {
             "auth-token": localStorage.getItem("token"),
@@ -48,7 +48,7 @@ function Data() {
   const handleSubmit = async (e) => {
     setLoader(true);
     e.preventDefault();
-    const response = await fetch("http://localhost:5000/api/data/adddata", {
+    const response = await fetch(`${api}/api/data/adddata`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

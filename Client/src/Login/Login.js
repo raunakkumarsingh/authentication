@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useContext } from "react";
 import "./Login.css";
-
+import api from '../api';
 import { useNavigate } from "react-router";
 
 function Login() {
@@ -16,7 +16,7 @@ function Login() {
   const handleSubmit = async (e) => {
     setLoader(true);
     e.preventDefault();
-    const response = await fetch("http://localhost:5000/api/auth/login", {
+    const response = await fetch(`${api}/api/auth/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

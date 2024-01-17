@@ -2,6 +2,7 @@ import React from 'react'
 import './signup.css'
 import { useState,useContext } from 'react';
 import { useNavigate } from 'react-router';
+import api from '../api';
 
 
 function Signup() {
@@ -27,7 +28,7 @@ function Signup() {
           alert("Please select role")
         }
         else{
-        const response = await fetch("http://localhost:5000/api/auth/createuser",{
+        const response = await fetch(`${api}/api/auth/createuser`,{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
